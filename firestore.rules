@@ -1,0 +1,101 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 1. Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // 2. Global primitive helpers
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerified() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isBootstrappedAdmin() {
+      return isVerified() && request.auth.token.email == 'jeonggons53@gmail.com';
+    }
+
+    function isAdmin() {
+      return isBootstrappedAdmin() || (
+        isVerified() && exists(/databases/$(database)/documents/admins/$(request.auth.uid))
+      );
+    }
+
+    // 3. Entity validation helpers
+    function isValidLead(data) {
+      return data.keys().hasAll(['product', 'name', 'age', 'phone', 'budget', 'memo', 'status', 'time', 'createdAt']) &&
+        data.keys().hasOnly(['product', 'name', 'age', 'phone', 'budget', 'memo', 'status', 'time', 'createdAt', 'updatedAt']) &&
+        data.product is string && data.product.size() >= 1 && data.product.size() <= 100 &&
+        data.name is string && data.name.size() >= 1 && data.name.size() <= 50 &&
+        data.age is string && data.age.size() >= 1 && data.age.size() <= 30 &&
+        data.phone is string && data.phone.size() >= 9 && data.phone.size() <= 20 && data.phone.matches('^[0-9\\-]+$') &&
+        data.budget is string && data.budget.size() >= 1 && data.budget.size() <= 50 &&
+        data.memo is string && data.memo.size() >= 1 && data.memo.size() <= 300 &&
+        data.status in ['상담대기', '상담완료'] &&
+        data.time is string && data.time.size() >= 10 && data.time.size() <= 30 &&
+        data.createdAt is timestamp &&
+        (!('updatedAt' in data) || data.updatedAt is timestamp);
+    }
+
+    function isValidAdminUser(data) {
+      return data.keys().hasAll(['email', 'role', 'createdAt']) &&
+        data.keys().hasOnly(['email', 'role', 'createdAt']) &&
+        data.email is string && data.email.size() >= 3 && data.email.size() <= 120 &&
+        data.role == 'admin' &&
+        data.createdAt is timestamp;
+    }
+
+    // 4. Leads collection: public validated intake, strict admin-only read/update/delete
+    match /leads/{leadId} {
+      allow get: if isValidId(leadId) && isAdmin();
+      allow list: if isBootstrappedAdmin();
+      allow create: if isValidId(leadId) &&
+        isValidLead(incoming()) &&
+        incoming().status == '상담대기' &&
+        incoming().createdAt == request.time &&
+        !('updatedAt' in incoming());
+      allow update: if isValidId(leadId) &&
+        isValidLead(incoming()) &&
+        isAdmin() &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().updatedAt == request.time &&
+        incoming().diff(existing()).affectedKeys().hasOnly(['status', 'updatedAt']);
+      allow delete: if isValidId(leadId) && isAdmin();
+    }
+
+    // 5. Admins registry: bootstrapped admin controlled
+    match /admins/{adminId} {
+      allow get: if isValidId(adminId) && (
+        isBootstrappedAdmin() || (isVerified() && request.auth.uid == adminId)
+      );
+      allow list: if isBootstrappedAdmin();
+      allow create: if isValidId(adminId) &&
+        isBootstrappedAdmin() &&
+        isValidAdminUser(incoming()) &&
+        incoming().createdAt == request.time;
+      allow update: if isValidId(adminId) &&
+        isBootstrappedAdmin() &&
+        isValidAdminUser(incoming()) &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().diff(existing()).affectedKeys().hasOnly(['email', 'role']);
+      allow delete: if isValidId(adminId) && isBootstrappedAdmin();
+    }
+  }
+}

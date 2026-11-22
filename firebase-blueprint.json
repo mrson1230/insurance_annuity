@@ -1,0 +1,105 @@
+{
+  "entities": {
+    "Lead": {
+      "title": "Lead",
+      "description": "Customer consultation request submitted from the Fubon Hyundai MAX Annuity landing page.",
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "string",
+          "description": "Selected annuity product or comparison option.",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "name": {
+          "type": "string",
+          "description": "Customer name.",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "age": {
+          "type": "string",
+          "description": "Birth year or age string.",
+          "minLength": 1,
+          "maxLength": 30
+        },
+        "phone": {
+          "type": "string",
+          "description": "Customer phone number.",
+          "minLength": 9,
+          "maxLength": 20,
+          "pattern": "^[0-9\\-]+$"
+        },
+        "budget": {
+          "type": "string",
+          "description": "Desired monthly savings range.",
+          "minLength": 1,
+          "maxLength": 50
+        },
+        "memo": {
+          "type": "string",
+          "description": "Optional consultation preference or inquiry notes.",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "status": {
+          "type": "string",
+          "description": "Consultation progress status.",
+          "enum": ["상담대기", "상담완료"]
+        },
+        "time": {
+          "type": "string",
+          "description": "Formatted submission timestamp for display and CSV export.",
+          "minLength": 10,
+          "maxLength": 30
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server creation timestamp."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server update timestamp."
+        }
+      },
+      "required": ["product", "name", "age", "phone", "budget", "memo", "status", "time", "createdAt"]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized planner or administrator account allowed to manage consultation leads.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "format": "email",
+          "maxLength": 120
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin"]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["email", "role", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/leads/{leadId}": {
+      "schema": {
+        "$ref": "#/entities/Lead"
+      },
+      "description": "Consultation leads containing customer PII. Public create is strictly schema-validated; read, update, and delete are restricted to verified administrators."
+    },
+    "/admins/{adminId}": {
+      "schema": {
+        "$ref": "#/entities/AdminUser"
+      },
+      "description": "Authorized administrator registry keyed by Firebase Auth UID."
+    }
+  }
+}

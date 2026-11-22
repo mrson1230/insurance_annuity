@@ -1,0 +1,6 @@
+{
+  "name": "푸본현대생명 MAX 연금보험 | 확정 보증 노후 설계",
+  "description": "시중 금리가 떨어져도 연복리 6%·최대 350% 확정 보증으로 든든한 평생 월급을 준비하는 푸본현대생명 MAX 연금보험 안내 및 무료 설계 신청 페이지입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
