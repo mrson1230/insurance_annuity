@@ -1,18 +1,15 @@
-import { Lock } from 'lucide-react';
+import { BrandLogo } from './BrandLogo';
 
-interface HeaderProps {
-  onOpenAdmin: () => void;
-}
-
-export function Header({ onOpenAdmin }: HeaderProps) {
+export function Header() {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200/80">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between gap-8">
         <a
           href="#top"
-          className="text-base sm:text-lg font-black tracking-tight text-[#003366] whitespace-nowrap shrink-0"
+          aria-label="보험플러스 홈"
+          className="flex items-center py-1 shrink-0"
         >
-          푸본현대생명 연금플랜
+          <BrandLogo variant="light" />
         </a>
 
         <nav
@@ -45,23 +42,13 @@ export function Header({ onOpenAdmin }: HeaderProps) {
           </a>
         </nav>
 
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-2 shrink-0">
           <a
             href="#consult-section"
-            className="bg-[#0055aa] hover:bg-[#004080] text-white text-xs sm:text-sm font-bold px-4 py-2.5 rounded-lg transition-colors whitespace-nowrap shrink-0"
+            className="bg-[#0055aa] hover:bg-[#004080] text-white text-xs sm:text-sm font-bold px-3.5 py-2 rounded-lg transition-colors shadow-sm whitespace-nowrap shrink-0"
           >
             무료 설계안 받기
           </a>
-          <button
-            type="button"
-            onClick={onOpenAdmin}
-            title="설계사 DB 관리"
-            aria-label="관리자 DB 열기"
-            className="p-2.5 text-slate-500 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-colors flex items-center gap-1 text-xs font-medium whitespace-nowrap shrink-0 cursor-pointer"
-          >
-            <Lock className="w-4 h-4" />
-            <span className="hidden sm:inline">관리자</span>
-          </button>
         </div>
       </div>
     </header>

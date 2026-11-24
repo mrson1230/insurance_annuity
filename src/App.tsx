@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FileText, Lock } from 'lucide-react';
 import { AdminModal } from './components/AdminModal';
+import { BrandLogo } from './components/BrandLogo';
 import { CheckPointSection } from './components/CheckPointSection';
 import { ConsultFormSection } from './components/ConsultFormSection';
 import { ErrorBoundary } from './components/ErrorBoundary';
@@ -25,7 +26,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-slate-50 text-slate-800 pb-20 sm:pb-0">
-        <Header onOpenAdmin={() => setIsAdminOpen(true)} />
+        <Header />
 
         <main>
           <HeroSection />
@@ -54,20 +55,22 @@ export default function App() {
         {/* 필수 법적 고지 푸터 */}
         <footer className="bg-slate-900 text-slate-400 py-10 px-4 sm:px-6 text-xs leading-relaxed">
           <div className="max-w-5xl mx-auto space-y-2.5">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
-              <span className="text-white font-bold text-sm">푸본현대생명 연금보험 상품 안내</span>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
+              <div className="flex items-center gap-3">
+                <BrandLogo variant="dark" />
+              </div>
               <button
                 type="button"
                 onClick={() => setIsAdminOpen(true)}
-                className="text-slate-400 hover:text-slate-200 text-left sm:text-right inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+                className="text-slate-500 hover:text-slate-300 text-left sm:text-right inline-flex items-center gap-1 transition-colors cursor-pointer"
               >
-                <Lock className="w-3.5 h-3.5" />
+                <Lock className="w-3 h-3" />
                 <span>[관리자 전용] 접수 고객 DB 확인</span>
               </button>
             </div>
             <p>
               • 본 페이지는 푸본현대생명의 주요 연금보험 상품(MAX 연금다운 연금보험 적립형(무), MAX
-              연금보험 하이브리드 플러스 적립형(무))의 핵심 내용을 안내하기 위한 홍보
+              연금보험 하이브리드 플러스 적립형(무))의 핵심 내용을 안내하기 위한 보험플러스 홍보
               랜딩페이지입니다.
             </p>
             <p>

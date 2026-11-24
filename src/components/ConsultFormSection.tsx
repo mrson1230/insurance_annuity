@@ -15,6 +15,8 @@ interface ConsultFormSectionProps {
   focusTrigger: number;
 }
 
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqpqgorn';
+
 const PRODUCT_OPTIONS = [
   {
     value: '두 상품 비교표 모두 받기',
@@ -101,6 +103,33 @@ export function ConsultFormSection({
         ...validation.data,
         createdAt: serverTimestamp(),
       });
+
+      try {
+        const emailResponse = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            _subject: `[보험플러스] 새 연금보험 상담 접수 - ${validation.data.name} (${validation.data.age})`,
+            접수일시: validation.data.time,
+            관심상품: validation.data.product,
+            성함: validation.data.name,
+            출생_나이: validation.data.age,
+            휴대폰번호: validation.data.phone,
+            희망월저축액: validation.data.budget,
+            문의사항: validation.data.memo,
+            접수상태: validation.data.status,
+            DB문서ID: leadId,
+          }),
+        });
+        if (!emailResponse.ok) {
+          console.error('Formspree 메일 전송 응답 오류:', emailResponse.status);
+        }
+      } catch (emailErr) {
+        console.error('Formspree 메일 전송 중 네트워크 오류:', emailErr);
+      }
 
       setSubmittedSummary({
         name: validation.data.name,

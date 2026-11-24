@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>푸본현대생명 MAX 연금보험 | 금리 인하기 확정 보증 노후 설계</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 폰트: Noto Sans KR & Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- 아이콘: Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Noto Sans KR', 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      word-break: keep-all;
+    }
+    .hero-bg {
+      background: radial-gradient(circle at top right, #0066cc 0%, #003366 55%, #001f3f 100%);
+    }
+    .gold-gradient {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(0, 51, 102, 0.08);
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-20 sm:pb-0">
+
+  <!-- 상단 심플 홍보 헤더 -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 h-14 sm:h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center py-1" aria-label="보험플러스 홈">
+        <!-- 투명 배경 SVG 브랜드 로고 (라이트 헤더용) -->
+        <svg viewBox="0 0 360 95" class="h-10 sm:h-12 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="heartBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0ea5e9"/>
+              <stop offset="50%" stop-color="#0284c7"/>
+              <stop offset="100%" stop-color="#1d4ed8"/>
+            </linearGradient>
+            <linearGradient id="heartGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#a3e635"/>
+              <stop offset="60%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#15803d"/>
+            </linearGradient>
+            <linearGradient id="plusGold" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24"/>
+              <stop offset="100%" stop-color="#f59e0b"/>
+            </linearGradient>
+          </defs>
+          <!-- 하트 왼쪽 블루 윙 -->
+          <path d="M52 27 C42 12, 16 14, 14 35 C12 54, 34 69, 51 82 C37 66, 26 51, 29 36 C31 25, 44 23, 52 27 Z" fill="url(#heartBlue)"/>
+          <!-- 하트 오른쪽 그린 리프 윙 -->
+          <path d="M52 27 C62 12, 88 14, 90 35 C92 54, 70 69, 44 85 C63 72, 78 55, 76 37 C74 25, 60 23, 52 27 Z" fill="url(#heartGreen)"/>
+          <!-- 하트 내부 가족 실루엣 -->
+          <circle cx="43" cy="39" r="4.5" fill="#0284c7"/>
+          <path d="M35 55 C35 47, 51 47, 51 55 Z" fill="#0284c7"/>
+          <circle cx="61" cy="40" r="4" fill="#16a34a"/>
+          <path d="M54 55 C54 48, 68 48, 68 55 Z" fill="#16a34a"/>
+          <circle cx="52" cy="47" r="3.2" fill="#0369a1"/>
+          <path d="M46 60 C46 54, 58 54, 58 60 Z" fill="#0369a1"/>
+          <!-- 우측 상단 반짝이 별 -->
+          <path d="M89 8 L91.5 14.5 L98 17 L91.5 19.5 L89 26 L86.5 19.5 L80 17 L86.5 14.5 Z" fill="#facc15"/>
+          <!-- 브랜드 메인 타이틀: 보험 + 플러스 -->
+          <text x="103" y="54" font-family="'Noto Sans KR', sans-serif" font-weight="900" font-size="34" font-style="italic" letter-spacing="-1.5">
+            <tspan fill="#0f172a">보험</tspan><tspan fill="url(#plusGold)">플러스</tspan>
+          </text>
+          <!-- 우측 상단 + 기호 -->
+          <path d="M312 18 H321 V9 H328 V18 H337 V25 H328 V34 H321 V25 H312 Z" fill="url(#plusGold)"/>
+          <!-- 하단 스우시 곡선 -->
+          <path d="M98 66 Q220 55 344 66 Q220 60 98 66 Z" fill="#38bdf8"/>
+          <!-- 슬로건 텍스트 -->
+          <text x="221" y="81" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-weight="700" font-size="11.5" fill="#475569" letter-spacing="0.5">
+            — 당신의 행복을 지키는 보험 —
+          </text>
+        </svg>
+      </a>
+      <div class="flex items-center gap-2">
+        <a href="#consult-section" class="bg-[#0055aa] hover:bg-[#004080] text-white text-xs sm:text-sm font-bold px-3.5 py-2 rounded-lg transition shadow-sm">
+          무료 설계안 받기
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. 히어로 섹션 (강력한 후킹 & 핵심 숫자 강조) -->
+  <section class="hero-bg text-white pt-10 pb-14 sm:pt-16 sm:pb-20 px-4 relative overflow-hidden">
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold text-amber-300 mb-5">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>2026년 최신 확정 보증형 연금보험 특별 안내</span>
+        </div>
+
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black leading-snug sm:leading-tight tracking-tight mb-5">
+          시중 금리가 떨어져도 내 연금은<br/>
+          <span class="text-amber-300 underline decoration-amber-400/50 underline-offset-8">연복리 6% · 최대 350%</span>로 지킵니다
+        </h1>
+
+        <p class="text-blue-100 text-sm sm:text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+          국민연금만으로는 부족한 은퇴 후 30년! 변동하는 공시이율 걱정 없이<br class="hidden sm:inline"/>
+          <strong>최저연금기준금액을 확정 보증</strong>해주는 푸본현대생명 MAX 연금으로 든든한 평생 월급을 준비하세요.
+        </p>
+
+        <!-- 핵심 3대 숫자 배지 -->
+        <div class="grid grid-cols-3 gap-2.5 sm:gap-5 max-w-2xl mx-auto mb-8">
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-3.5 sm:p-5">
+            <p class="text-[11px] sm:text-xs text-blue-200 mb-1">납입 중 보증</p>
+            <p class="text-lg sm:text-3xl font-black text-amber-300">연복리 6%</p>
+            <p class="text-[10px] sm:text-xs text-blue-100 mt-0.5">납입 후 4% 보증</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-3.5 sm:p-5">
+            <p class="text-[11px] sm:text-xs text-blue-200 mb-1">최대 지급 한도</p>
+            <p class="text-lg sm:text-3xl font-black text-white">최대 350%</p>
+            <p class="text-[10px] sm:text-xs text-blue-100 mt-0.5">10년납 기준 한도</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-2xl p-3.5 sm:p-5">
+            <p class="text-[11px] sm:text-xs text-blue-200 mb-1">단기납 보증이율</p>
+            <p class="text-lg sm:text-3xl font-black text-emerald-300">연 3.70%</p>
+            <p class="text-[10px] sm:text-xs text-blue-100 mt-0.5">5년 유지 시 확정</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="#consult-section" class="w-full sm:w-auto gold-gradient hover:opacity-95 text-slate-950 font-black px-8 py-4 rounded-xl text-base sm:text-lg shadow-xl transition flex items-center justify-center gap-2">
+            <span>내 나이 기준 예상 연금액 무료 조회</span>
+            <i data-lucide="chevron-right" class="w-5 h-5"></i>
+          </a>
+          <a href="#compare-section" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/25 text-white font-bold px-6 py-4 rounded-xl text-sm sm:text-base transition">
+            두 가지 상품 한눈에 비교하기
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 공감 & 문제 제기 섹션 (왜 일반 연금이 아닌 '보증형'인가?) -->
+  <section class="py-12 sm:py-16 px-4 max-w-5xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-[#0055aa] font-extrabold text-xs sm:text-sm tracking-wider uppercase">CHECK POINT</span>
+      <h2 class="text-xl sm:text-3xl font-black text-slate-900 mt-1">이런 고민을 하고 계신다면 꼭 확인하세요!</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 card-shadow">
+        <div class="w-11 h-11 rounded-xl bg-blue-50 text-[#0055aa] flex items-center justify-center mb-4">
+          <i data-lucide="trending-down" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-2">"금리가 떨어지면 내 연금도 줄어들까 걱정돼요"</h3>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+          일반 공시이율형 연금은 시중 금리 하락 시 수령액이 줄어들 수 있습니다. <strong>푸본현대 MAX 연금</strong>은 가입 시 약속한 최저연금기준금액을 확정 보증합니다.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 card-shadow">
+        <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center mb-4">
+          <i data-lucide="hand-coins" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-2">"은퇴 시점에 목돈 쓸 일이 생기면 어쩌죠?"</h3>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+          연금 개시 시점에 기납입보험료 또는 연금기준금액의 <strong>최대 40%까지 목적자금 인출</strong>이 가능해 자녀 결혼·의료비로 쓰고 나머지는 종신연금으로 받습니다.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200/80 card-shadow">
+        <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-4">
+          <i data-lucide="clock" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-extrabold text-slate-900 text-base sm:text-lg mb-2">"10년, 20년 납입은 너무 길게 느껴져요"</h3>
+        <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+          <strong>3년납·5년납 단기 플랜</strong>도 준비되어 있습니다. 짧은 기간 납입하고 5년 유지 시 3.70% 보증이율과 장기유지보너스 혜택까지 챙기실 수 있습니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 핵심 상품 2종 상세 비교 섹션 -->
+  <section id="compare-section" class="py-12 sm:py-16 px-4 bg-white border-y border-slate-200">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <span class="text-[#0055aa] font-extrabold text-xs sm:text-sm tracking-wider uppercase">PRODUCT COMPARISON</span>
+        <h2 class="text-xl sm:text-3xl font-black text-slate-900 mt-1">내 자금 계획에 딱 맞는 MAX 연금 2종 비교</h2>
+        <p class="text-slate-500 text-xs sm:text-base mt-2">장기 고수익 보증형과 단기납 보너스형 중 나에게 유리한 플랜을 선택해 보세요.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <!-- 상품 1 -->
+        <div class="rounded-3xl border-2 border-[#0055aa] bg-slate-50/50 overflow-hidden flex flex-col card-shadow">
+          <div class="bg-[#003366] text-white p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full">BEST · 연복리 6% 보증</span>
+              <span class="text-blue-200 text-xs font-medium">가입나이 0세 ~ 65세</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black">1. MAX 연금다운 연금보험 적립형(무)</h3>
+            <p class="text-blue-100 text-xs sm:text-sm mt-1.5">10년·20년 적립으로 연금 재원을 최대 350%까지 키우는 정통 보증연금</p>
+          </div>
+
+          <div class="p-6 flex-1 space-y-4 text-xs sm:text-sm">
+            <div class="bg-white p-4 rounded-2xl border border-blue-100 shadow-sm">
+              <p class="font-extrabold text-[#003366] mb-1.5 flex items-center gap-1.5">
+                <i data-lucide="shield-check" class="w-4 h-4 text-[#0055aa]"></i>
+                <span>최저연금기준금액 강력 보증 (1형 가입 시)</span>
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-center mt-2">
+                <div class="bg-blue-50 p-2.5 rounded-xl">
+                  <span class="block text-[11px] text-slate-500">납입 기간 중</span>
+                  <strong class="text-base sm:text-lg text-[#0055aa]">연복리 6%</strong>
+                </div>
+                <div class="bg-blue-50 p-2.5 rounded-xl">
+                  <span class="block text-[11px] text-slate-500">납입 완료 후 개시 전</span>
+                  <strong class="text-base sm:text-lg text-[#0055aa]">연복리 4%</strong>
+                </div>
+              </div>
+            </div>
+
+            <ul class="space-y-3 text-slate-700 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#0055aa] shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>최대 지급 한도:</strong> 10년납은 납입 총보험료의 <strong class="text-slate-900">최대 350%</strong>, 20년납은 <strong class="text-slate-900">최대 300%</strong>까지 보증 한도 설정</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#0055aa] shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>목적자금 인출:</strong> 개시 시점에 '기납입보험료'와 '연금기준금액의 40%' 중 적은 금액 인출 가능 (잔여 재원 종신연금 수령)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#0055aa] shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>가입 조건:</strong> 월 20만 원 이상 / 10년납·20년납 선택 / 연금 개시 45~80세</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-[#0055aa] shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>가족 상속 및 세제 혜택:</strong> 보증기간 내 사망 시 가족 상속, 80% 이상 재해장해 시 월 50만 원(36회) 지급, 요건 충족 시 <strong class="text-[#0055aa]">비과세 혜택</strong></span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-5 bg-white border-t border-slate-200/80">
+            <button onclick="selectAndGo('MAX 연금다운 연금보험 적립형(무)')" class="w-full bg-[#0055aa] hover:bg-[#004080] text-white font-extrabold py-3.5 rounded-xl text-sm sm:text-base transition shadow">
+              이 상품으로 무료 설계안 신청하기 →
+            </button>
+          </div>
+        </div>
+
+        <!-- 상품 2 -->
+        <div class="rounded-3xl border border-slate-200 bg-slate-50/50 overflow-hidden flex flex-col card-shadow">
+          <div class="bg-slate-800 text-white p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="bg-emerald-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full">단기납 · 보너스 특화</span>
+              <span class="text-slate-300 text-xs font-medium">연금 개시 45세 ~ 90세</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-black">2. MAX 연금보험 하이브리드 플러스 적립형(무)</h3>
+            <p class="text-slate-300 text-xs sm:text-sm mt-1.5">3년·5년 짧은 납입으로 3.70% 보증과 장기유지보너스를 받는 실속형</p>
+          </div>
+
+          <div class="p-6 flex-1 space-y-4 text-xs sm:text-sm">
+            <div class="bg-white p-4 rounded-2xl border border-emerald-100 shadow-sm">
+              <p class="font-extrabold text-emerald-900 mb-1.5 flex items-center gap-1.5">
+                <i data-lucide="award" class="w-4 h-4 text-emerald-600"></i>
+                <span>5년 유지 시 확정 보증이율 & 보너스</span>
+              </p>
+              <div class="grid grid-cols-2 gap-2 text-center mt-2">
+                <div class="bg-emerald-50 p-2.5 rounded-xl">
+                  <span class="block text-[11px] text-slate-500">5년 유지 시 최저적립액</span>
+                  <strong class="text-base sm:text-lg text-emerald-700">연 3.70% 보증</strong>
+                </div>
+                <div class="bg-emerald-50 p-2.5 rounded-xl">
+                  <span class="block text-[11px] text-slate-500">유지 기간에 따른 혜택</span>
+                  <strong class="text-base sm:text-lg text-emerald-700">장기유지보너스</strong>
+                </div>
+              </div>
+            </div>
+
+            <ul class="space-y-3 text-slate-700 leading-relaxed">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>초단기 납입 가능:</strong> 긴 납입이 부담스러운 분들을 위한 <strong class="text-slate-900">3년납 · 5년납</strong> 및 여유로운 <strong class="text-slate-900">10년납</strong> 선택</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>가벼운 시작 금액:</strong> 3년납·5년납은 <strong class="text-slate-900">월 20만 원 이상</strong>, 10년납은 <strong class="text-slate-900">월 10만 원 이상</strong>부터 가입 가능</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-600 shrink-0 mt-1 stroke-[3]"></i>
+                <span><strong>여유로운 개시 시점:</strong> 은퇴 시기에 맞춰 <strong class="text-slate-900">45세 ~ 90세</strong> 사이에서 자유롭게 연금 개시 연령 선택</span>
+              </li>
+            </ul>
+
+            <div class="p-3.5 bg-white rounded-xl border border-slate-200 text-xs text-slate-600 leading-relaxed">
+              💡 <strong>추천 포인트:</strong> 3~5년 안에 납입을 끝내고 공시이율 변동과 무관하게 안정적인 최저적립액 보장을 원하시는 분께 추천합니다.
+            </div>
+          </div>
+
+          <div class="p-5 bg-white border-t border-slate-200/80">
+            <button onclick="selectAndGo('MAX 연금보험 하이브리드 플러스 적립형(무)')" class="w-full bg-slate-800 hover:bg-slate-900 text-white font-extrabold py-3.5 rounded-xl text-sm sm:text-base transition shadow">
+              이 상품으로 무료 설계안 신청하기 →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 인터랙티브 적립 한도 시뮬레이터 -->
+  <section class="py-12 sm:py-16 px-4 max-w-4xl mx-auto">
+    <div class="bg-white rounded-3xl border border-slate-200 p-6 sm:p-10 card-shadow">
+      <div class="text-center mb-8">
+        <span class="inline-flex items-center gap-1.5 text-[#0055aa] font-extrabold text-xs sm:text-sm bg-blue-50 px-3 py-1 rounded-full mb-2">
+          <i data-lucide="calculator" class="w-4 h-4"></i>
+          <span>10초 간편 계산기</span>
+        </span>
+        <h2 class="text-xl sm:text-3xl font-black text-slate-900">내가 매달 저축하면 얼마나 보증받을까?</h2>
+        <p class="text-slate-500 text-xs sm:text-sm mt-1">슬라이더를 움직여 총 납입 원금과 최대 보증 한도를 확인해 보세요.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8">
+        <div>
+          <div class="flex justify-between items-end mb-2">
+            <label class="text-sm font-bold text-slate-700">월 희망 납입액</label>
+            <span id="sim-amount-label" class="text-xl sm:text-2xl font-black text-[#0055aa]">30만 원</span>
+          </div>
+          <input type="range" id="sim-amount" min="10" max="200" step="10" value="30" oninput="updateSimulator()" class="w-full h-2.5 bg-slate-200 rounded-lg accent-[#0055aa] cursor-pointer" />
+          <div class="flex justify-between text-xs text-slate-400 mt-1.5">
+            <span>10만 원</span>
+            <span>100만 원</span>
+            <span>200만 원</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-slate-700 mb-2">희망 납입 기간</label>
+          <div class="grid grid-cols-4 gap-2">
+            <button type="button" onclick="setSimYears(3)" class="sim-year-btn py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 bg-slate-50 text-slate-600 transition">3년납</button>
+            <button type="button" onclick="setSimYears(5)" class="sim-year-btn py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 bg-slate-50 text-slate-600 transition">5년납</button>
+            <button type="button" onclick="setSimYears(10)" class="sim-year-btn py-3 rounded-xl text-xs sm:text-sm font-bold border-2 border-[#0055aa] bg-blue-50 text-[#0055aa] transition">10년납</button>
+            <button type="button" onclick="setSimYears(20)" class="sim-year-btn py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 bg-slate-50 text-slate-600 transition">20년납</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#002855] text-white rounded-2xl p-5 sm:p-7 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+        <div class="pb-4 sm:pb-0 border-b sm:border-b-0 border-white/15">
+          <p class="text-xs text-blue-200">내가 납입하는 총 원금</p>
+          <p id="sim-total-principal" class="text-2xl sm:text-3xl font-black mt-1">3,600만 원</p>
+        </div>
+        <div class="sm:border-l sm:border-white/15 sm:pl-6">
+          <p id="sim-highlight-title" class="text-xs text-amber-300 font-bold">MAX 연금다운 최대 보증 한도 (350%)</p>
+          <p id="sim-highlight-value" class="text-2xl sm:text-3xl font-black text-amber-300 mt-1">최대 1억 2,600만 원</p>
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-400 mt-3 text-center">
+        * 이해를 돕기 위한 단순 한도 예시이며, 실제 연금 수령액은 연령·성별·거치기간·보증비용 등에 따라 달라지므로 아래에서 정확한 가입설계서를 받아보세요.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. 자주 묻는 질문 (FAQ 아코디언 - 고객 의구심 해소) -->
+  <section class="py-10 px-4 max-w-3xl mx-auto">
+    <h2 class="text-xl sm:text-2xl font-black text-slate-900 text-center mb-6">자주 묻는 질문 (FAQ)</h2>
+    <div class="space-y-3">
+      <details class="group bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 cursor-pointer" open>
+        <summary class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between list-none">
+          <span>Q. 중도에 목돈이 필요하면 해지해야 하나요?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100 leading-relaxed">
+          아닙니다. <strong>MAX 연금다운 연금보험</strong>의 경우 연금 개시 시점에 '기납입보험료'와 '연금기준금액의 40%' 중 적은 금액을 목적자금으로 일시 인출해 교육비·의료비 등으로 활용하시고, 남은 금액으로 평생 종신연금을 수령하실 수 있습니다.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 cursor-pointer">
+        <summary class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between list-none">
+          <span>Q. 비과세 혜택도 받을 수 있나요?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100 leading-relaxed">
+          네, 관련 세법에서 정한 요건(5년 이상 납입 및 10년 이상 유지, 월납 150만 원 이하 한도 등)을 충족하실 경우 이자소득세 비과세 혜택을 적용받으실 수 있습니다.
+        </p>
+      </details>
+
+      <details class="group bg-white rounded-2xl border border-slate-200 p-4 sm:p-5 cursor-pointer">
+        <summary class="font-bold text-slate-900 text-sm sm:text-base flex items-center justify-between list-none">
+          <span>Q. 가입 전 예상 수령액 표만 먼저 받아볼 수 있나요?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition-transform"></i>
+        </summary>
+        <p class="text-xs sm:text-sm text-slate-600 mt-3 pt-3 border-t border-slate-100 leading-relaxed">
+          물론입니다! 아래 무료 설계 신청란에 출생년도와 연락처만 남겨주시면 카카오톡이나 문자로 <strong>고객님 연령 기준 맞춤 가입설계서(예상 연금액표)</strong>를 부담 없이 보내드립니다.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 6. 최종 전환 섹션 (상담 및 DB 수집 폼) -->
+  <section id="consult-section" class="py-12 sm:py-16 px-4 max-w-2xl mx-auto">
+    <div class="bg-white rounded-3xl shadow-2xl border-2 border-[#0055aa] overflow-hidden">
+      <div class="hero-bg text-white p-6 sm:p-8 text-center">
+        <span class="inline-block bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full mb-3">100% 무료 · 비대면 카톡/문자 안내 가능</span>
+        <h2 class="text-2xl sm:text-3xl font-black leading-snug">내 연령 기준 예상 연금 수령액<br/>무료 설계안 받아보기</h2>
+        <p class="text-blue-100 text-xs sm:text-sm mt-2">지금 신청하시면 두 상품 비교표와 맞춤 수령액 시뮬레이션 결과를 보내드립니다.</p>
+      </div>
+
+      <form id="lead-form" onsubmit="handleLeadSubmit(event)" class="p-6 sm:p-8 space-y-4">
+        <div>
+          <label class="block text-sm font-bold text-slate-800 mb-1.5">관심 상품 선택</label>
+          <select id="input-product" class="w-full rounded-xl border border-slate-300 px-3.5 py-3.5 text-sm sm:text-base bg-white focus:outline-none focus:ring-2 focus:ring-[#0055aa]">
+            <option value="두 상품 비교표 모두 받기">두 상품 비교표 모두 받아보기 (추천)</option>
+            <option value="MAX 연금다운 연금보험 적립형(무)">1. MAX 연금다운 연금보험 적립형(무) - 연복리 6%/4%</option>
+            <option value="MAX 연금보험 하이브리드 플러스 적립형(무)">2. MAX 연금보험 하이브리드 플러스 적립형(무) - 단기납/3.70%</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-bold text-slate-800 mb-1.5">성함 <span class="text-red-500">*</span></label>
+            <input type="text" id="input-name" required placeholder="예: 김연금" class="w-full rounded-xl border border-slate-300 px-3.5 py-3.5 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0055aa]" />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-slate-800 mb-1.5">출생년도 (또는 나이) <span class="text-red-500">*</span></label>
+            <input type="text" id="input-age" required placeholder="예: 1980년생" class="w-full rounded-xl border border-slate-300 px-3.5 py-3.5 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0055aa]" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-bold text-slate-800 mb-1.5">휴대폰 번호 <span class="text-red-500">*</span></label>
+            <input type="tel" id="input-phone" required placeholder="010-0000-0000" oninput="formatPhone(this)" maxlength="13" class="w-full rounded-xl border border-slate-300 px-3.5 py-3.5 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0055aa]" />
+          </div>
+          <div>
+            <label class="block text-sm font-bold text-slate-800 mb-1.5">희망 월 저축액</label>
+            <select id="input-budget" class="w-full rounded-xl border border-slate-300 px-3.5 py-3.5 text-base sm:text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#0055aa]">
+              <option value="월 20만원대">월 20만 원대</option>
+              <option value="월 30만원대" selected>월 30만 원대</option>
+              <option value="월 50만원대">월 50만 원대</option>
+              <option value="월 100만원 이상">월 100만 원 이상</option>
+              <option value="월 10만원대(하이브리드)">월 10만 원대 (10년납)</option>
+              <option value="상담 후 결정">상담 후 결정</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-bold text-slate-800 mb-1.5">희망 안내 방식 / 문의사항 (선택)</label>
+          <input type="text" id="input-memo" placeholder="예: 전화 전 카톡으로 먼저 설계안 부탁드려요." class="w-full rounded-xl border border-slate-300 px-3.5 py-3.5 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0055aa]" />
+        </div>
+
+        <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+          <label class="flex items-start gap-2.5 cursor-pointer">
+            <input type="checkbox" required checked class="mt-0.5 w-4 h-4 accent-[#0055aa] rounded shrink-0" />
+            <span class="text-xs text-slate-600 leading-relaxed">
+              <strong>[필수] 개인정보 수집 및 이용 동의:</strong> 연금보험 무료 가입설계 및 상담 안내를 위해 성함, 출생년도, 연락처를 수집·이용하는 것에 동의합니다.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" class="w-full gold-gradient hover:opacity-95 text-slate-950 font-black py-4 rounded-xl text-base sm:text-lg shadow-lg transition flex items-center justify-center gap-2">
+          <span>무료 연금 설계안 지금 신청하기</span>
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 모바일 전용 하단 고정 플로팅 CTA 바 -->
+  <div class="sm:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-slate-200 p-2.5 shadow-[0_-4px_15px_rgba(0,0,0,0.08)]">
+    <a href="#consult-section" class="w-full gold-gradient text-slate-950 font-black py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 shadow">
+      <i data-lucide="file-text" class="w-4 h-4"></i>
+      <span>내 예상 연금 수령액 무료 신청하기</span>
+    </a>
+  </div>
+
+  <!-- 필수 법적 고지 푸터 -->
+  <footer class="bg-slate-900 text-slate-400 py-10 px-4 text-xs leading-relaxed">
+    <div class="max-w-5xl mx-auto space-y-2.5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <!-- 투명 배경 SVG 브랜드 로고 (다크 푸터용 화이트 텍스트) -->
+          <svg viewBox="0 0 360 95" class="h-9 sm:h-11 w-auto" xmlns="http://www.w3.org/2000/svg">
+            <path d="M52 27 C42 12, 16 14, 14 35 C12 54, 34 69, 51 82 C37 66, 26 51, 29 36 C31 25, 44 23, 52 27 Z" fill="#0ea5e9"/>
+            <path d="M52 27 C62 12, 88 14, 90 35 C92 54, 70 69, 44 85 C63 72, 78 55, 76 37 C74 25, 60 23, 52 27 Z" fill="#4ade80"/>
+            <circle cx="43" cy="39" r="4.5" fill="#38bdf8"/>
+            <path d="M35 55 C35 47, 51 47, 51 55 Z" fill="#38bdf8"/>
+            <circle cx="61" cy="40" r="4" fill="#4ade80"/>
+            <path d="M54 55 C54 48, 68 48, 68 55 Z" fill="#4ade80"/>
+            <circle cx="52" cy="47" r="3.2" fill="#7dd3fc"/>
+            <path d="M46 60 C46 54, 58 54, 58 60 Z" fill="#7dd3fc"/>
+            <path d="M89 8 L91.5 14.5 L98 17 L91.5 19.5 L89 26 L86.5 19.5 L80 17 L86.5 14.5 Z" fill="#fde047"/>
+            <text x="103" y="54" font-family="'Noto Sans KR', sans-serif" font-weight="900" font-size="34" font-style="italic" letter-spacing="-1.5">
+              <tspan fill="#ffffff">보험</tspan><tspan fill="#fcd34d">플러스</tspan>
+            </text>
+            <path d="M312 18 H321 V9 H328 V18 H337 V25 H328 V34 H321 V25 H312 Z" fill="#fcd34d"/>
+            <path d="M98 66 Q220 55 344 66 Q220 60 98 66 Z" fill="#7dd3fc"/>
+            <text x="221" y="81" text-anchor="middle" font-family="'Noto Sans KR', sans-serif" font-weight="500" font-size="11.5" fill="#cbd5e1" letter-spacing="0.5">
+              — 당신의 행복을 지키는 보험 —
+            </text>
+          </svg>
+        </div>
+        <button onclick="openAdminGate()" class="text-slate-500 hover:text-slate-300 text-left sm:text-right flex items-center gap-1">
+          <i data-lucide="lock" class="w-3 h-3"></i>
+          <span>[관리자 전용] 접수 고객 DB 확인</span>
+        </button>
+      </div>
+      <p>• 본 페이지는 푸본현대생명의 주요 연금보험 상품(MAX 연금다운 연금보험 적립형(무), MAX 연금보험 하이브리드 플러스 적립형(무))의 핵심 내용을 안내하기 위한 보험플러스 홍보 랜딩페이지입니다.</p>
+      <p>• 보험계약 체결 전 상품설명서 및 약관을 반드시 확인하시기 바랍니다. 중도 해지 시 해약환급금은 납입한 보험료보다 적거나 없을 수 있습니다.</p>
+      <p>• 비과세 혜택은 관련 세법에서 정한 요건을 충족하는 경우에 한하여 적용됩니다.</p>
+    </div>
+  </footer>
+
+  <!-- 신청 완료 모달 -->
+  <div id="success-modal" class="fixed inset-0 z-50 hidden bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center shadow-2xl">
+      <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <i data-lucide="check-circle" class="w-8 h-8"></i>
+      </div>
+      <h3 class="text-xl font-black text-slate-900 mb-2">설계안 신청이 완료되었습니다!</h3>
+      <p id="success-modal-text" class="text-sm text-slate-600 leading-relaxed mb-6">
+        고객님의 연령에 맞춘 예상 연금 수령액표를 준비하여 빠르게 안내드리겠습니다.
+      </p>
+      <button onclick="document.getElementById('success-modal').classList.add('hidden')" class="w-full bg-[#0055aa] text-white font-bold py-3.5 rounded-xl text-sm">
+        확인
+      </button>
+    </div>
+  </div>
+
+  <!-- 관리자 비밀번호 인증 / 초기 설정 모달 -->
+  <div id="auth-modal" class="fixed inset-0 z-50 hidden bg-slate-950/75 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2 text-slate-900">
+          <div class="w-9 h-9 rounded-xl bg-slate-900 text-amber-400 flex items-center justify-center">
+            <i data-lucide="shield-lock" class="w-5 h-5"></i>
+          </div>
+          <h3 id="auth-modal-title" class="font-black text-lg">관리자 인증</h3>
+        </div>
+        <button onclick="closeAuthModal()" class="text-slate-400 hover:text-slate-700 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <p id="auth-modal-desc" class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+        고객 DB 열람을 위해 관리자 비밀번호를 입력해 주세요.
+      </p>
+
+      <form onsubmit="handleAdminAuthSubmit(event)" class="space-y-3">
+        <div>
+          <input type="password" id="admin-pw-input" required placeholder="비밀번호 입력 (4자리 이상)" autocomplete="current-password" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0055aa]" />
+        </div>
+        <div id="admin-pw-confirm-wrap" class="hidden">
+          <input type="password" id="admin-pw-confirm" placeholder="비밀번호 다시 입력" autocomplete="new-password" class="w-full rounded-xl border border-slate-300 px-4 py-3 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-[#0055aa]" />
+        </div>
+        <p id="auth-error-msg" class="text-xs text-red-600 font-semibold hidden"></p>
+        <button type="submit" id="auth-submit-btn" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-sm transition">
+          확인
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 설계사 전용 DB 확인/다운로드 모달 -->
+  <div id="admin-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-3 sm:p-6">
+    <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+      <div class="bg-slate-900 text-white px-5 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="database" class="w-5 h-5 text-amber-400"></i>
+          <h3 class="font-bold text-base sm:text-lg">접수된 상담 고객 DB (<span id="modal-db-total">0</span>건)</h3>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="openChangePasswordModal()" class="text-xs bg-white/10 hover:bg-white/20 text-slate-200 px-2.5 py-1.5 rounded-lg transition">
+            비밀번호 변경
+          </button>
+          <button onclick="toggleAdminModal(false)" class="text-slate-400 hover:text-white p-1">
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-slate-50 px-5 py-3 border-b border-slate-200 flex items-center justify-between gap-2">
+        <span class="text-xs text-slate-500">고객 번호를 누르면 바로 전화 연결됩니다.</span>
+        <button onclick="exportToCSV()" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-2 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>엑셀(CSV) 저장</span>
+        </button>
+      </div>
+
+      <div id="admin-list-container" class="flex-1 overflow-y-auto p-4 sm:p-6 space-y-3">
+        <!-- JS 렌더링 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase 클라우드 DB 연동 스크립트 -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+    import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, getDoc, setDoc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+    const appId = typeof __app_id !== 'undefined' ? __app_id : 'fubon-annuity-promo';
+    const firebaseConfig = JSON.parse(__firebase_config);
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getFirestore(app);
+
+    let currentUser = null;
+    let leadsDB = [];
+    let unsubscribeLeads = null;
+    let isAdminUnlocked = false;
+
+    // 1. 인증 초기화 (Custom Token 우선, 실패 시 익명 로그인)
+    async function initAuth() {
+      try {
+        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+          await signInWithCustomToken(auth, __initial_auth_token);
+        } else {
+          await signInAnonymously(auth);
+        }
+      } catch (err) {
+        console.error("인증 오류:", err);
+      }
+    }
+
+    onAuthStateChanged(auth, (user) => {
+      currentUser = user;
+      if (user && isAdminUnlocked) {
+        subscribeToLeads();
+      }
+    });
+
+    initAuth();
+
+    // 2. 관리자 비밀번호 조회 및 저장 (클라우드 동기화)
+    window.getStoredAdminPassword = async function() {
+      if (!currentUser) await initAuth();
+      if (!currentUser) return null;
+      const configRef = doc(db, 'artifacts', appId, 'public', 'data', 'fubon_promo_config', 'admin_auth');
+      const snap = await getDoc(configRef);
+      return snap.exists() ? snap.data().password : null;
+    };
+
+    window.setStoredAdminPassword = async function(newPassword) {
+      if (!currentUser) await initAuth();
+      if (!currentUser) throw new Error("인증 세션을 확인할 수 없습니다.");
+      const configRef = doc(db, 'artifacts', appId, 'public', 'data', 'fubon_promo_config', 'admin_auth');
+      await setDoc(configRef, {
+        password: newPassword,
+        updatedAt: serverTimestamp()
+      });
+    };
+
+    // 3. 실시간 DB 구독 (관리자 비밀번호 인증 완료 후에만 활성화)
+    window.unlockAndSubscribeLeads = function() {
+      isAdminUnlocked = true;
+      subscribeToLeads();
+    };
+
+    function subscribeToLeads() {
+      if (!currentUser || !isAdminUnlocked) return;
+      if (unsubscribeLeads) unsubscribeLeads();
+
+      const leadsColRef = collection(db, 'artifacts', appId, 'public', 'data', 'fubon_promo_leads');
+      unsubscribeLeads = onSnapshot(
+        leadsColRef,
+        (snapshot) => {
+          const items = [];
+          snapshot.forEach((docSnap) => {
+            items.push({ id: docSnap.id, ...docSnap.data() });
+          });
+          // 최신순 정렬 (메모리 내 정렬)
+          items.sort((a, b) => (b.createdAtMs || 0) - (a.createdAtMs || 0));
+          leadsDB = items;
+          window.renderAdminList();
+        },
+        (error) => {
+          console.error("DB 실시간 조회 오류:", error);
+        }
+      );
+    }
+
+    // 4. 고객 상담 신청 저장 함수 (전역 노출)
+    window.saveLeadToCloud = async function(leadData) {
+      if (!currentUser) {
+        await initAuth();
+      }
+      if (!currentUser) throw new Error("인증 세션을 확인할 수 없습니다.");
+
+      const leadsColRef = collection(db, 'artifacts', appId, 'public', 'data', 'fubon_promo_leads');
+      await addDoc(leadsColRef, {
+        ...leadData,
+        createdAtMs: Date.now(),
+        createdAtServer: serverTimestamp()
+      });
+    };
+
+    // 5. 상담 상태 변경 함수 (전역 노출)
+    window.toggleStatus = async function(docId) {
+      if (!currentUser || !isAdminUnlocked) return;
+      const item = leadsDB.find(l => l.id === docId);
+      if (!item) return;
+
+      const nextStatus = item.status === '상담대기' ? '상담완료' : '상담대기';
+      try {
+        const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'fubon_promo_leads', docId);
+        await updateDoc(docRef, { status: nextStatus });
+      } catch (err) {
+        console.error("상태 변경 오류:", err);
+      }
+    };
+
+    // 6. DB 항목 삭제 함수 (전역 노출)
+    window.deleteCloudLead = async function(docId) {
+      if (!currentUser || !isAdminUnlocked) return;
+      try {
+        const docRef = doc(db, 'artifacts', appId, 'public', 'data', 'fubon_promo_leads', docId);
+        await deleteDoc(docRef);
+      } catch (err) {
+        console.error("삭제 오류:", err);
+      }
+    };
+
+    // 7. 관리자 리스트 렌더링 & 엑셀 다운로드용 데이터 연결
+    window.getLeadsDB = function() {
+      return isAdminUnlocked ? leadsDB : [];
+    };
+  </script>
+
+  <script>
+    lucide.createIcons();
+
+    let simYears = 10;
+
+    function setSimYears(years) {
+      simYears = years;
+      document.querySelectorAll('.sim-year-btn').forEach(btn => {
+        if (btn.textContent.startsWith(years + '년')) {
+          btn.className = 'sim-year-btn py-3 rounded-xl text-xs sm:text-sm font-bold border-2 border-[#0055aa] bg-blue-50 text-[#0055aa] transition';
+        } else {
+          btn.className = 'sim-year-btn py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-200 bg-slate-50 text-slate-600 transition';
+        }
+      });
+      updateSimulator();
+    }
+
+    function updateSimulator() {
+      const monthly = parseInt(document.getElementById('sim-amount').value, 10);
+      document.getElementById('sim-amount-label').textContent = monthly.toLocaleString() + '만 원';
+
+      const total = monthly * 12 * simYears;
+      document.getElementById('sim-total-principal').textContent = formatMoney(total);
+
+      const titleEl = document.getElementById('sim-highlight-title');
+      const valEl = document.getElementById('sim-highlight-value');
+
+      if (simYears === 10) {
+        titleEl.textContent = 'MAX 연금다운 최대 보증 한도 (350%)';
+        valEl.textContent = '최대 ' + formatMoney(Math.round(total * 3.5));
+      } else if (simYears === 20) {
+        titleEl.textContent = 'MAX 연금다운 최대 보증 한도 (300%)';
+        valEl.textContent = '최대 ' + formatMoney(Math.round(total * 3.0));
+      } else {
+        titleEl.textContent = '하이브리드 플러스 5년 유지 보증이율';
+        valEl.textContent = formatMoney(total) + ' + 연 3.70%';
+      }
+    }
+
+    function formatMoney(man) {
+      if (man >= 10000) {
+        const uk = Math.floor(man / 10000);
+        const rest = man % 10000;
+        return rest > 0 ? `${uk}억 ${rest.toLocaleString()}만 원` : `${uk}억 원`;
+      }
+      return `${man.toLocaleString()}만 원`;
+    }
+
+    function selectAndGo(productName) {
+      document.getElementById('input-product').value = productName;
+      document.getElementById('consult-section').scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => document.getElementById('input-name').focus(), 450);
+    }
+
+    function formatPhone(input) {
+      let v = input.value.replace(/[^0-9]/g, '');
+      if (v.length > 3 && v.length <= 7) input.value = v.slice(0, 3) + '-' + v.slice(3);
+      else if (v.length > 7) input.value = v.slice(0, 3) + '-' + v.slice(3, 7) + '-' + v.slice(7, 11);
+      else input.value = v;
+    }
+
+    async function handleLeadSubmit(e) {
+      e.preventDefault();
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      const originalBtnHtml = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span>접수 처리 중...</span>';
+
+      const now = new Date();
+      const time = `${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`;
+
+      const lead = {
+        time,
+        status: '상담대기',
+        product: document.getElementById('input-product').value,
+        name: document.getElementById('input-name').value.trim(),
+        age: document.getElementById('input-age').value.trim(),
+        phone: document.getElementById('input-phone').value.trim(),
+        budget: document.getElementById('input-budget').value,
+        memo: document.getElementById('input-memo').value.trim() || '-'
+      };
+
+      try {
+        await window.saveLeadToCloud(lead);
+        document.getElementById('success-modal-text').innerHTML =
+          `<strong>${escapeHtml(lead.name)}</strong> 고객님의 무료 설계 신청이 안전하게 접수되었습니다.<br/>선택하신 <strong>[${escapeHtml(lead.product)}]</strong> 안내표를 준비해 연락드리겠습니다.`;
+        document.getElementById('success-modal').classList.remove('hidden');
+        document.getElementById('lead-form').reset();
+      } catch (err) {
+        console.error("저장 실패:", err);
+        document.getElementById('success-modal-text').innerHTML =
+          `일시적인 통신 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.`;
+        document.getElementById('success-modal').classList.remove('hidden');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      }
+    }
+
+    // 관리자 인증 게이트 상태 ('verify' | 'setup' | 'change')
+    let authMode = 'verify';
+    let sessionAuthorized = false;
+
+    async function openAdminGate() {
+      if (sessionAuthorized) {
+        toggleAdminModal(true);
+        return;
+      }
+
+      const errorEl = document.getElementById('auth-error-msg');
+      errorEl.classList.add('hidden');
+      document.getElementById('admin-pw-input').value = '';
+      document.getElementById('admin-pw-confirm').value = '';
+
+      try {
+        const existingPw = await window.getStoredAdminPassword();
+        if (!existingPw) {
+          // 최초 접속 시 관리자 비밀번호 신규 설정 모드
+          authMode = 'setup';
+          document.getElementById('auth-modal-title').textContent = '관리자 비밀번호 최초 설정';
+          document.getElementById('auth-modal-desc').textContent = '설계사님만 고객 DB를 열람할 수 있도록 사용하실 비밀번호(4자리 이상)를 설정해 주세요.';
+          document.getElementById('admin-pw-confirm-wrap').classList.remove('hidden');
+          document.getElementById('auth-submit-btn').textContent = '비밀번호 설정 및 DB 열기';
+        } else {
+          // 비밀번호 확인 모드
+          authMode = 'verify';
+          document.getElementById('auth-modal-title').textContent = '관리자 비밀번호 확인';
+          document.getElementById('auth-modal-desc').textContent = '접수된 고객 DB를 열람하려면 설정하신 관리자 비밀번호를 입력해 주세요.';
+          document.getElementById('admin-pw-confirm-wrap').classList.add('hidden');
+          document.getElementById('auth-submit-btn').textContent = '잠금 해제';
+        }
+        document.getElementById('auth-modal').classList.remove('hidden');
+        setTimeout(() => document.getElementById('admin-pw-input').focus(), 100);
+      } catch (err) {
+        console.error("인증 상태 확인 오류:", err);
+      }
+    }
+
+    function openChangePasswordModal() {
+      authMode = 'change';
+      document.getElementById('auth-error-msg').classList.add('hidden');
+      document.getElementById('admin-pw-input').value = '';
+      document.getElementById('admin-pw-confirm').value = '';
+      document.getElementById('auth-modal-title').textContent = '관리자 비밀번호 변경';
+      document.getElementById('auth-modal-desc').textContent = '새로 사용할 관리자 비밀번호(4자리 이상)를 입력해 주세요.';
+      document.getElementById('admin-pw-confirm-wrap').classList.remove('hidden');
+      document.getElementById('auth-submit-btn').textContent = '새 비밀번호 저장';
+      document.getElementById('auth-modal').classList.remove('hidden');
+      setTimeout(() => document.getElementById('admin-pw-input').focus(), 100);
+    }
+
+    function closeAuthModal() {
+      document.getElementById('auth-modal').classList.add('hidden');
+    }
+
+    async function handleAdminAuthSubmit(e) {
+      e.preventDefault();
+      const pw = document.getElementById('admin-pw-input').value.trim();
+      const pwConfirm = document.getElementById('admin-pw-confirm').value.trim();
+      const errorEl = document.getElementById('auth-error-msg');
+      errorEl.classList.add('hidden');
+
+      if (pw.length < 4) {
+        errorEl.textContent = '비밀번호는 최소 4자리 이상 입력해 주세요.';
+        errorEl.classList.remove('hidden');
+        return;
+      }
+
+      if (authMode === 'setup' || authMode === 'change') {
+        if (pw !== pwConfirm) {
+          errorEl.textContent = '비밀번호가 일치하지 않습니다. 다시 확인해 주세요.';
+          errorEl.classList.remove('hidden');
+          return;
+        }
+        try {
+          await window.setStoredAdminPassword(pw);
+          sessionAuthorized = true;
+          window.unlockAndSubscribeLeads();
+          closeAuthModal();
+          toggleAdminModal(true);
+        } catch (err) {
+          errorEl.textContent = '비밀번호 저장 중 오류가 발생했습니다.';
+          errorEl.classList.remove('hidden');
+        }
+      } else {
+        try {
+          const savedPw = await window.getStoredAdminPassword();
+          if (pw === savedPw) {
+            sessionAuthorized = true;
+            window.unlockAndSubscribeLeads();
+            closeAuthModal();
+            toggleAdminModal(true);
+          } else {
+            errorEl.textContent = '비밀번호가 올바르지 않습니다.';
+            errorEl.classList.remove('hidden');
+          }
+        } catch (err) {
+          errorEl.textContent = '인증 확인 중 오류가 발생했습니다.';
+          errorEl.classList.remove('hidden');
+        }
+      }
+    }
+
+    function toggleAdminModal(show) {
+      const modal = document.getElementById('admin-modal');
+      if (show) {
+        if (!sessionAuthorized) {
+          openAdminGate();
+          return;
+        }
+        window.renderAdminList();
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    window.renderAdminList = function() {
+      const leadsDB = window.getLeadsDB ? window.getLeadsDB() : [];
+      const count = leadsDB.length;
+      document.getElementById('modal-db-total').textContent = count;
+
+      const container = document.getElementById('admin-list-container');
+      if (count === 0) {
+        container.innerHTML = `<div class="text-center py-12 text-slate-400 text-sm">아직 접수된 상담 신청 내역이 없습니다.</div>`;
+        return;
+      }
+
+      container.innerHTML = leadsDB.map(l => `
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <button onclick="window.toggleStatus('${l.id}')" class="px-2.5 py-0.5 rounded-full text-xs font-bold ${l.status === '상담완료' ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-800'}">
+                ${escapeHtml(l.status)}
+              </button>
+              <span class="font-black text-slate-900">${escapeHtml(l.name)}</span>
+              <span class="text-xs text-slate-500">(${escapeHtml(l.age)})</span>
+              <span class="text-[11px] text-slate-400">${escapeHtml(l.time)}</span>
+            </div>
+            <p class="text-xs text-slate-700"><strong>관심:</strong> ${escapeHtml(l.product)} / <strong>희망:</strong> ${escapeHtml(l.budget)}</p>
+            ${l.memo !== '-' ? `<p class="text-xs text-slate-500"><strong>메모:</strong> ${escapeHtml(l.memo)}</p>` : ''}
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="tel:${escapeHtml(l.phone)}" class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 bg-[#0055aa] text-white text-xs font-bold px-4 py-2.5 rounded-lg">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>${escapeHtml(l.phone)}</span>
+            </a>
+            <button onclick="window.deleteCloudLead('${l.id}')" class="p-2.5 text-slate-400 hover:text-red-600 bg-white border border-slate-200 rounded-lg" title="삭제">
+              <i data-lucide="trash-2" class="w-4 h-4"></i>
+            </button>
+          </div>
+        </div>
+      `).join('');
+      lucide.createIcons();
+    };
+
+    function exportToCSV() {
+      const leadsDB = window.getLeadsDB ? window.getLeadsDB() : [];
+      if (leadsDB.length === 0) return;
+      const headers = ['접수일시', '상태', '성함', '출생/나이', '연락처', '관심상품', '희망납입', '메모'];
+      const rows = leadsDB.map(l => [l.time, l.status, l.name, l.age, l.phone, l.product, l.budget, l.memo]
+        .map(v => `"${String(v).replace(/"/g, '""')}"`).join(','));
+      const csv = '\uFEFF' + [headers.join(','), ...rows].join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `푸본현대연금_홍보DB_${new Date().toISOString().slice(0,10)}.csv`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    updateSimulator();
+  </script>
+</body>
+</html>
